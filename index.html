@@ -11,7 +11,7 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<style type="text/css">
 
-	body {
+	html, body {
 		font-family: Sans-Serif;
 		background-image: url("website_background_1920x1080.png"); /* should change if we're on mobile */
 		background-repeat: no-repeat;
@@ -21,36 +21,53 @@
 
 	.content {
 		color: #EEEEEE;
+		font-size: 24;
 		background-color: rgba(68, 68, 68, 0.75);
 	}
 
-	.short {
-		min-height: 20%;
+	.tall {
+		margin-top: 15%;
+		margin-bottom: 15%;
 	}
 
-	.tall {
-		min-height: 100%;
+	.fill {
+    min-height: 100%;
+    height: 100%;
+		color: red;
+	}
+
+	.fullscreen {
 		height: 100%;
+	}
+
+	.white {
+		background-color: rgba(240, 240, 240, 0.25);
+	}
+
+	.copyrighted {
+		color: #DDDDDD;
+		text-align: right;
+		margin-bottom: 0;
 	}
 
 	</style>
 
 </head>
 
-<body>
-	<div class="container-fluid">
+<body class="fill">
+	<div class="container-fluid fill">
 
 		<div class="row short">
 		</div>
 
-		<div class="row .row.row-eq-height">
+		<div class="row .row.row-eq-height tall">
 
-			<div class="col-md-1">
+			<div class="col-md-1 col-sm-1">
 			</div>
 
 			<!-- inside, the column where we put our content -->
 			<!-- this is the part that needs to fit a phone but hang to the left of the screen for desktops -->
-			<div class="col-md-4 content tall">
+			<div class="col-md-4 col-sm-4 content">
 				<p>Idle Wonders</p>
 				<p>Look how cool it is there's wonders and you build them and wow you can tap on dudes to hire them or tap on cool spells to do things that are alright at worst, and look how cool you can earn money guys that's <i>Money</i> with a capital M because it's a bignum that means you can have really</p>
 				<p>big money values potentially as much as your phone can handle</p>
@@ -60,16 +77,16 @@
 				<p>APP STORE WHOOOO~</p>
 			</div>
 
-			<div class="col-md-1">
+			<div class="col-md-1 col-sm-1">
 			</div>
-			<div class="col-md-6">
+			<div class="col-md-6 col-sm-6">
 			</div>
 		</div>
 
-		<div class="page-footer">
-			<h1>Example Page Footer</h1>
-		</div>
+	</div>
 
+	<div class="white">
+		<p class="copyrighted">(c) Chris Brooks 2016</p>
 	</div>
 </body>
 </html>
