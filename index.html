@@ -12,7 +12,8 @@
 	<style type="text/css">
 
 	html {
-		height: 100%;
+  		position: relative;
+  		min-height: 100%;
 	}
 
 	body {
@@ -20,6 +21,7 @@
 		background-image: url("website_background_1920x1080.png"); /* should change if we're on mobile */
 		background-repeat: no-repeat;
 		background-size: cover;
+  		margin-bottom: 60px;
 		height: 100%;
 	}
 
@@ -36,8 +38,13 @@
 	}
 
 	.fill {
-    min-height: 100%;
-    height: 100%;
+    	min-height: 100%;
+    	height: 100%;
+	}
+
+	.fat {
+		min-width: 100%;
+		width: 100%;
 	}
 
 	.red {
@@ -74,6 +81,19 @@
 		margin-bottom: 15%;
 	}
 
+	.footer {
+  		position: absolute;
+  		bottom: 0;
+  		width: 100%;
+  		/* Set the fixed height of the footer here */
+  		height: 20px;
+  		background-color: #f5f5f5;
+	}
+
+	.container .text-muted {
+  		margin: 20px 0;
+	}
+
 	@media only screen and (max-device-width: 720px) {
     body {
 			background-image: url("website_background_750x1334.png");
@@ -85,23 +105,12 @@
 </head>
 
 <body class="fill">
-	<div class="container-fluid fill">
-
-		<div class="row short">
-		</div>
-
-		<div class="row .row.row-eq-height fill">
-
-			<div class="col-md-1 col-sm-1">
-			</div>
-
-			<div class="col-md-1 col-sm-1">
-			</div>
+	<div class="container">
 
 			<!-- inside, the column where we put our content -->
 			<!-- this is the part that needs to fit a phone but hang to the left of the screen for desktops -->
-			<div class="col-md-3 col-sm-3 fill">
-				<div class="tall content">
+			<!--<div class="col-md-12 col-sm-12 fill">-->
+			<div class="content">
 					<p class="headerText">Idle Wonders</p>
 
 					<div class="mainText">
@@ -113,19 +122,11 @@
 					</div>
 
 					<p class="appStoreLink"><center><b>App Store Link coming soon!</b></center></p>
-				</div>
 			</div>
-
-			<div class="col-md-3 col-sm-3">
-			</div>
-
-			<div class="col-md-4 col-sm-4">
-			</div>
-		</div>
 
 	</div>
 
-	<div class="white">
+	<div class="footer white">
 		<p class="copyrighted">(c) Chris Brooks 2016</p>
 	</div>
 </body>
